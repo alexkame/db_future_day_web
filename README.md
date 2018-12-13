@@ -1,16 +1,9 @@
 # db_future_day_web
-国内期货4大交易所日线行情数据库
-
-
+期货日线行情数据库
 
 说明：
-- anaconda3.7
-- 国内4大交易所网站公布日线行情数据，其中：中金所为xml; 上期所为json；另两个为txt。分别下载原始数据，分别解析。
-- 整理至“交易所，品种，合约，ohlc，结算，昨结算，成交量，持仓量，成交金额”格式；
-- 检验：日期完整性检验；windpy随机抽样对比（如果有windpy）
-- 大商所新上市品种，需要在standard函数下_dce_parse函数的codes中添加
-
-使用：
-1. mysql下建立数据库quotation
-2. 解压缩origin.zip （交易所下载的原始数据，更新至2018年12月12日）
-3. 运行py程序，自动更新
+- python3.7
+- 数据格式：exchange code contract date ohlc vol opn turnover
+- 检验：日期完整性检验
+- mysql下建立数据库quotation
+- 解压缩 origin.zip （更新至2018年12月12日）
